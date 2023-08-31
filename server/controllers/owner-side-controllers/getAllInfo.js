@@ -23,7 +23,7 @@ const getAllInfo = async (req, res) => {
       return res
         .status(400)
         .json(errorResponse("", "", "Comments not found for the user"));
-    const response = { ...owner, ...commentsForTheUser._doc.comments };
+    const response = { ...owner._doc, ...commentsForTheUser._doc.comments };
     return res.status(200).json(successResponse(response));
   } catch (err) {
     res.status(400).json(errorResponse("", "", err.message));
