@@ -5,6 +5,14 @@ const OwnerDetailsHero = ({ userId }) => {
   const inputRef = React.useRef(null);
   const [isCopied, setIsCopied] = React.useState(false);
 
+  const copyText = 
+`
+Tell me anything anonymously.
+Send me an anonymous message:
+
+https://anonymous-message-sender.netlify.app/user/${userId}/friends/add-comment
+`
+
   let timeout = null;
   React.useEffect(() => {
     if (isCopied) {
@@ -17,7 +25,7 @@ const OwnerDetailsHero = ({ userId }) => {
 
   return (
     <div className="relative w-full">
-      <div className="relative isolate z-0 bg-white px-6 pt-14 lg:px-8">
+      <div className="relative isolate z-0 bg-white px-6 lg:px-8">
         <div className="relative mx-auto max-w-2xl py-6 sm:py-24">
           <div className="absolute inset-x-0 -top-[4rem] -z-10 transform-gpu overflow-hidden blur-3xl md:-top-[10rem]">
             <HeroBackground />
@@ -42,7 +50,7 @@ const OwnerDetailsHero = ({ userId }) => {
               <button
                 onClick={() => {
                   inputRef.current.select();
-                  window.navigator.clipboard.writeText(inputRef.current.value);
+                  window.navigator.clipboard.writeText(copyText);
                   setIsCopied(true);
                 }}
                 className="w-[150px] rounded-md bg-[#3b92ff] px-3 py-2 text-md font-semibold text-white shadow-sm hover:bg-[#3b92ff]/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"

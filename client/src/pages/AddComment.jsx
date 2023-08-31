@@ -1,16 +1,16 @@
 import React from "react";
-import { TopDialog } from "../components/TopDialog";
+import CommentOnPost from "../components/CommentOnPost";
 import { ExampleNavbarOne } from "../components/NavBar";
 import Footer from "../components/Footer";
 
-const Dashboard = () => {
+const AddComment = () => {
   return (
     <>
       <ExampleNavbarOne />
-      <TopDialog />
+      <CommentOnPost />
       <Footer />
     </>
   );
 };
 
-export default Dashboard;
+export default AddComment;
