@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const Owner = new mongoose.Schema({
-  user_id: { type: String, required: true },
+  user_id: { type: String, required: true, unique: true },
   user_name: { type: String, default: null, required: true },
   email: { type: String, unique: true },
 });
