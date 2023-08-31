@@ -28,7 +28,7 @@ export function ExampleNavbarOne() {
   };
 
   return (
-    <div className="sticky top-0 w-full bg-indigo-200">
+    <div className="sticky top-0 w-full bg-indigo-200 z-50">
       <div className="mx-auto flex items-center justify-between px-6 py-2 sm:px-6 lg:px-8">
         <div className="inline-flex items-center space-x-2">
           <img src={logo} alt="" className="w-[125px] sm:w-[200px]" />

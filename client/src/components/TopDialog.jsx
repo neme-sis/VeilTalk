@@ -36,7 +36,9 @@ export function TopDialog() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto w-full text-center md:max-w-2xl">
             <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
-              Create an anonymous message sending link
+              Create an
+              <span className="text-[#3b92ff]">{" anonymous message "}</span>
+              sending link
             </h2>
 
             <ul className="max-w-md space-y-1 mt-10 text-gray-500 list-disc dark:text-gray-400 mx-auto flex flex-col align-top justify-start px-4">
@@ -56,7 +58,7 @@ export function TopDialog() {
             <div className="flex flex-col items-center sm:flex-row sm:justify-center">
               <div className="flex w-full flex-col max-w-sm items-center space-y-5">
                 <input
-                  className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 "
+                  className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-base placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 text-[#12182f]"
                   type="email"
                   placeholder="Name*"
                   value={inputData.name}
@@ -65,7 +67,7 @@ export function TopDialog() {
                   }
                 />
                 <input
-                  className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 "
+                  className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-base placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 text-[#12182f]"
                   type="email"
                   placeholder="Email (optional)"
                   value={inputData.email}
@@ -75,7 +77,7 @@ export function TopDialog() {
                 />
                 <button
                   onClick={handleSubmit}
-                  className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                  className="rounded-md bg-[#3b92ff] px-3 py-2 text-md font-semibold text-white shadow-sm hover:bg-[#3b92ff]/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                 >
                   Create Link
                 </button>

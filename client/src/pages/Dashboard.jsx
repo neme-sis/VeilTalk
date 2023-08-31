@@ -1,8 +1,14 @@
 import React from "react";
 import { TopDialog } from "../components/TopDialog";
+import { ExampleNavbarOne } from "../components/NavBar";
 
 const Dashboard = () => {
-  return <TopDialog />;
+  return (
+    <>
+      <ExampleNavbarOne />
+      <TopDialog />
+    </>
+  );
 };
 
 export default Dashboard;
