@@ -14,10 +14,12 @@ const {
 } = require("unique-names-generator");
 
 const addComment = async (req, res) => {
-  const { user_id } = req.params;
+  const { user_id, comment } = req.body;
 
   if (!user_id)
     return res.status(400).json(errorResponse("", "", "User ID is required"));
+  if (!comment)
+    return res.status(400).json(errorResponse("", "", "Comment is required"));
   try {
     const commentsForTheUser = await Comments.findOne({
       user_id,
@@ -36,7 +38,7 @@ const addComment = async (req, res) => {
     const timestamp = new Date().getTime();
     await Comments.findOneAndUpdate(
       { user_id },
-      { $push: { comment_id, comment: req.body.comment, name, timestamp } }
+      { $push: { comment_id, comment, name, timestamp } }
     );
     return res.status(200).json(successResponse("Comment added successfully"));
   } catch (err) {
