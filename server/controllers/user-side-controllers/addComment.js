@@ -3,6 +3,7 @@ const {
   successResponse,
   errorResponse,
 } = require("../../helper/defaultResponse");
+const { v4 } = require("uuid");
 
 const addComment = async (req, res) => {
   const { user_id } = req.params;
