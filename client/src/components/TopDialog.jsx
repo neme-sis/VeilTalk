@@ -1,14 +1,25 @@
 import React from "react";
 import { Lock } from "lucide-react";
 import { AlertBanner } from "./AlertComponentDanger";
+import { addUser } from "../actions/addUser";
+import { useNavigate } from "react-router-dom";
+import OverlayLoader from "./OverlayLoader";
 
 export function TopDialog() {
   const [inputData, setInputData] = React.useState({ name: "", email: "" });
   const [showAlert, setShowAlert] = React.useState(false);
-  const handleSubmit = (e) => {
+  const [isUploading, setIsUploading] = React.useState(false);
+  const navigate = useNavigate();
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (inputData.name === "") return setShowAlert(true);
-    console.log(inputData);
+    setIsUploading(true);
+    const createdUser = await addUser(inputData);
+    console.log(createdUser);
+    setIsUploading(false);
+    if (createdUser) {
+      navigate(`/user/${createdUser.user_id}/comments`);
+    }
   };
   let timeout = null;
   React.useEffect(() => {
@@ -24,6 +35,8 @@ export function TopDialog() {
     setShowAlert(false);
     clearTimeout(timeout);
   };
+
+  if (isUploading) return <OverlayLoader />;
   return (
     <>
       {showAlert && (
