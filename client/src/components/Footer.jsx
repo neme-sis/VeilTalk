@@ -8,7 +8,7 @@ function Footer() {
       <div className="container relative z-10 mx-auto px-4">
         <div className="-m-8 flex flex-wrap items-center justify-between">
           <div className="w-auto p-8">
-            <Link to="/">
+            <Link to="#">
               <div className="inline-flex items-center">
                 <img src={logo} alt="" className="w-[125px] sm:w-[200px]" />
               </div>
@@ -19,7 +19,7 @@ function Footer() {
               <li className="p-5">
                 <Link
                   className="font-medium text-gray-600 hover:text-gray-700"
-                  to="/"
+                  to="#"
                 >
                   Privacy Policy
                 </Link>
@@ -27,7 +27,7 @@ function Footer() {
               <li className="p-5">
                 <Link
                   className="font-medium text-gray-600 hover:text-gray-700"
-                  to="/"
+                  to="#"
                 >
                   Terms of Service
                 </Link>
@@ -35,7 +35,7 @@ function Footer() {
               <li className="p-5">
                 <Link
                   className="font-medium text-gray-600 hover:text-gray-700"
-                  to="/"
+                  to="#"
                 >
                   Return Policy
                 </Link>
@@ -43,7 +43,7 @@ function Footer() {
               <li className="p-5">
                 <Link
                   className="font-medium text-gray-600 hover:text-gray-700"
-                  to="/"
+                  to="#"
                 >
                   Contact Us
                 </Link>
@@ -53,7 +53,7 @@ function Footer() {
           <div className="w-auto p-8">
             <div className="-m-1.5 flex flex-wrap">
               <div className="w-auto p-1.5">
-                <Link to="/">
+                <Link to="#">
                   <div className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-300 hover:border-gray-400">
                     <svg
                       width="8"
@@ -71,7 +71,7 @@ function Footer() {
                 </Link>
               </div>
               <div className="w-auto p-1.5">
-                <Link to="/">
+                <Link to="#">
                   <div className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-300 hover:border-gray-400">
                     <svg
                       width="14"
@@ -89,7 +89,7 @@ function Footer() {
                 </Link>
               </div>
               <div className="w-auto p-1.5">
-                <Link to="/">
+                <Link to="#">
                   <div className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-300 hover:border-gray-400">
                     <svg
                       width="16"
