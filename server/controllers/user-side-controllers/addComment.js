@@ -38,7 +38,7 @@ const addComment = async (req, res) => {
     const timestamp = new Date().getTime();
     await Comments.findOneAndUpdate(
       { user_id },
-      { $push: { comment_id, comment, name, timestamp } }
+      { $push: { comments: { comment_id, comment, name, timestamp } } }
     );
     return res.status(200).json(successResponse("Comment added successfully"));
   } catch (err) {

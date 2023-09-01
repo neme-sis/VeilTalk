@@ -76,7 +76,7 @@ const CommentOnPost = () => {
         />
       )}
       <div className="min-h-[calc(100vh-255px)] px-2 py-10 lg:px-0 flex justify-between items-center">
-        <aside className="none sm:block">
+        <aside className="hidden sm:block">
           <img
             src="https://i.pinimg.com/originals/b0/1d/df/b01ddf257d18c8a9b41e0502161d580c.gif"
             alt=""
@@ -124,7 +124,7 @@ const CommentOnPost = () => {
                     <div role="status">
                       <svg
                         aria-hidden="true"
-                        class="w-4 h-4 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+                        className="w-4 h-4 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
                         viewBox="0 0 100 101"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -138,7 +138,7 @@ const CommentOnPost = () => {
                           fill="currentFill"
                         />
                       </svg>
-                      <span class="sr-only">Loading...</span>
+                      <span className="sr-only">Loading...</span>
                     </div>
                   ) : (
                     "Send Message"
@@ -157,7 +157,7 @@ const CommentOnPost = () => {
             </form>
           </div>
         </div>
-        <aside className="none sm:block">
+        <aside className="hidden sm:block">
           <img
             src="https://i.pinimg.com/originals/b0/1d/df/b01ddf257d18c8a9b41e0502161d580c.gif"
             alt=""

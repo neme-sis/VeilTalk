@@ -28,17 +28,17 @@ const EachComment = ({ name, comment, timestamp }) => {
     new Date(timestamp)
   );
   return (
-    <div class="flex items-center justify-center my-4">
-      <div class="bg-white border-l-2 border-t-2 border-solid border-indigo-200 border-le max-w-xl rounded-2xl px-10 py-8 shadow-lg hover:shadow-2xl transition duration-500 mx-4">
-        <div class="mt-4">
-          <p class="mt-4 text-md text-gray-600">{comment}</p>
-          <div class="flex justify-between items-center">
-            <div class="mt-4 flex items-center space-x-4 py-6">
-              <div class="">
+    <div className="flex items-center justify-center my-4">
+      <div className="bg-white border-l-2 border-t-2 border-solid border-indigo-200 border-le max-w-xl rounded-2xl px-10 py-8 shadow-lg hover:shadow-2xl transition duration-500 mx-4">
+        <div className="mt-4">
+          <p className="mt-4 text-base sm:text-lg text-gray-950">{comment}</p>
+          <div className="flex justify-between items-center">
+            <div className="mt-4 flex items-center space-x-4 py-6">
+              <div className="">
                 <Animal dance size={"2rem"} />
               </div>
-              <div class="text-sm font-semibold">
-                {name} • <span class="font-normal"> {timeDifference}</span>
+              <div className="text-sm font-semibold">
+                {name} • <span className="font-normal"> {timeDifference}</span>
               </div>
             </div>
           </div>

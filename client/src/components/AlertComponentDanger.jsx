@@ -5,9 +5,11 @@ export function AlertBanner({ msg = "", onClose = () => {}, type = "danger" }) {
   return (
     <div className="fixed z-[500] top-5 left-[50%] translate-x-[-50%] w-[100%] max-w-[800px]">
       <div
-        className={`rounded-md border-l-4 border-${
-          type === "danger" ? "red" : "green"
-        }-500 bg-${type === "danger" ? "red" : "green"}-100 p-4`}
+        className={`rounded-md border-l-4 ${
+          type === "danger"
+            ? "bg-red-100 border-red-500"
+            : "bg-green-100 border-green-500"
+        } p-4`}
       >
         <div className="flex items-center justify-between space-x-4">
           <div>
