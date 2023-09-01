@@ -28,8 +28,8 @@ const EachComment = ({ name, comment, timestamp }) => {
     new Date(timestamp)
   );
   return (
-    <div className="flex items-center justify-center my-4 w-[min(90%,400px)]">
-      <div className="bg-white border-l-2 border-t-2 border-solid border-indigo-200 border-le max-w-xl rounded-2xl px-10 py-8 shadow-lg hover:shadow-2xl transition duration-500 mx-4">
+    <div className="flex items-center justify-center my-4">
+      <div className="bg-white border-l-2 border-t-2 border-solid border-indigo-200 border-le max-w-xl rounded-2xl px-10 py-8 shadow-lg hover:shadow-2xl transition duration-500 mx-4 w-[min(90%,400px)]">
         <div className="mt-4">
           <p className="mt-4 text-base sm:text-lg text-gray-950">{comment}</p>
           <div className="flex justify-between items-center">
