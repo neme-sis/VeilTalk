@@ -1,5 +1,4 @@
-export const postMessage = async (comment) => {
-  const id = localStorage.getItem("user_id");
+export const postMessage = async (id, comment) => {
   if (!id) return;
   try {
     const response = await ownerApi.post(`/message`, {

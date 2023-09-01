@@ -1,7 +1,6 @@
 import { ownerApi } from "../apis";
 
-export const getUser = async () => {
-  const id = localStorage.getItem("user_id");
+export const getUser = async (id) => {
   if (!id) return;
   try {
     const response = await ownerApi.get(`/user?user_id=${id}`);

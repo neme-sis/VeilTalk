@@ -32,7 +32,7 @@ https://anonymous-message-sender.netlify.app/user/${userId}/friends/add-comment
           </div>
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Enjoy the anonymous messages from your friends.
+              Enjoy the anonymous messages from your friends. 🎉
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Don't forget to share your link with your friends. Remember, they

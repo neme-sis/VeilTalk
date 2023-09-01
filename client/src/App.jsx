@@ -1,4 +1,3 @@
-import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import ErrorPage from "./pages/ErrorPage";

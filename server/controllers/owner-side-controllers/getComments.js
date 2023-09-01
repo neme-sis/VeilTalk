@@ -5,7 +5,7 @@ const {
 } = require("../../helper/defaultResponse");
 
 const getComments = async (req, res) => {
-  const { user_id } = req.params;
+  const { user_id } = req.query;
 
   if (!user_id)
     return res.status(400).json(errorResponse("", "", "User ID is required"));

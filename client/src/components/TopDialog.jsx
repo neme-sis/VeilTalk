@@ -51,7 +51,7 @@ export function TopDialog() {
             <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
               Create an
               <span className="text-[#3b92ff]">{" anonymous message "}</span>
-              sending link
+              sending link 🐱‍👤
             </h2>
 
             <ul className="max-w-md space-y-1 mt-10 text-gray-500 list-disc dark:text-gray-400 mx-auto flex flex-col align-top justify-start px-4">
