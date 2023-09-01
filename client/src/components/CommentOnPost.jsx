@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { postMessage } from "../actions/postMessage";
 import OverlayLoader from "./OverlayLoader";
 import { getUser } from "../actions/getUser";
+import { AlertBanner } from "./AlertComponentDanger";
 
 const CommentOnPost = () => {
   const [message, setMessage] = useState("");
@@ -15,28 +16,25 @@ const CommentOnPost = () => {
   });
   const userId = useParams().id;
   const navigateTo = useNavigate();
-  const sendMessage = useCallback(
-    async (e) => {
-      e.preventDefault();
-      setLoading(true);
-      const res = await postMessage(userId, message);
-      setLoading(false);
-      if (res) {
-        setMessage("");
-        setShowAlert({
-          show: true,
-          msg: "Message sent successfully",
-          type: "success",
-        });
-      } else
-        setShowAlert({
-          show: true,
-          msg: "Something went wrong. Please try again later",
-          type: "danger",
-        });
-    },
-    [message, userId, setMessage, setLoading, postMessage]
-  );
+  const sendMessage = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    const res = await postMessage(userId, message);
+    setLoading(false);
+    if (res) {
+      setMessage("");
+      setShowAlert({
+        show: true,
+        msg: "Message sent successfully",
+        type: "success",
+      });
+    } else
+      setShowAlert({
+        show: true,
+        msg: "Something went wrong. Please try again later",
+        type: "danger",
+      });
+  };
 
   const getOwnerOfLink = useCallback(async () => {
     if (!userId) return navigateTo("/error", { replace: true });
@@ -111,15 +109,15 @@ const CommentOnPost = () => {
                 <button
                   type="button"
                   className="rounded-md mt-6 bg-black px-3 py-2 text-base font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-                  onClick={() => {
-                    if (loading) return;
+                  onClick={(e) => {
+                    if (loading) return console.log("loading");;
                     if (!message)
                       return setShowAlert({
                         show: true,
                         msg: "Please enter a message to send",
                         type: "danger",
                       });
-                    sendMessage();
+                    sendMessage(e);
                   }}
                 >
                   {loading ? (

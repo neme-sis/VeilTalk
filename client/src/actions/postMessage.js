@@ -1,3 +1,5 @@
+import { ownerApi } from "../apis";
+
 export const postMessage = async (id, comment) => {
   if (!id) return;
   try {
