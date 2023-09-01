@@ -9,7 +9,7 @@ const EachComment = new mongoose.Schema({
 
 const Comments = new mongoose.Schema({
   user_id: { type: String, required: true, unique: true },
-  comments: { type: EachComment, default: [] },
+  comments: [EachComment],
 });
 
 module.exports = mongoose.model("veiltalk-comments", Comments);
