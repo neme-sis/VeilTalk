@@ -5,13 +5,12 @@ const OwnerDetailsHero = ({ userId }) => {
   const inputRef = React.useRef(null);
   const [isCopied, setIsCopied] = React.useState(false);
 
-  const copyText = 
-`
+  const copyText = `
 Tell me anything anonymously.
 Send me an anonymous message:
 
-https://anonymous-message-sender.netlify.app/user/${userId}/friends/add-comment
-`
+${window.location.origin}/user/${userId}/friends/add-comment
+`;
 
   let timeout = null;
   React.useEffect(() => {
