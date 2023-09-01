@@ -6,8 +6,8 @@ const OwnerDetailsHero = ({ userId }) => {
   const [isCopied, setIsCopied] = React.useState(false);
 
   const copyText = `
-Tell me anything anonymously.
-Send me an anonymous message:
+Tell me anything anonymously🙈.
+Send me an anonymous message😝🤫:
 
 ${window.location.origin}/user/${userId}/friends/add-comment
 `;
