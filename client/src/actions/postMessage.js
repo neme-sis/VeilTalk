@@ -1,9 +1,9 @@
-import { ownerApi } from "../apis";
+import { userApi } from "../apis";
 
 export const postMessage = async (id, comment) => {
   if (!id) return;
   try {
-    const response = await ownerApi.post(`/message`, {
+    const response = await userApi.post(`/comment`, {
       user_id: id,
       comment,
     });
