@@ -44,7 +44,7 @@ ${window.location.origin}/user/${userId}/friends/add-comment
                 className="w-full rounded-md border-black border px-3 py-2 text-sm sm:text-base font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                 readOnly
                 ref={inputRef}
-                value={`https://${window.location.origin}/user/${userId}/friends/add-comment`}
+                value={`${window.location.origin}/user/${userId}/friends/add-comment`}
               />
               <button
                 onClick={() => {
