@@ -10,7 +10,7 @@ const OwnerDetails = () => {
   const navigate = useNavigate();
   useEffect(() => {
     const user_id = localStorage.getItem("user_id");
-    if (!user_id) navigate("/");
+    if (!user_id) navigate("/", { replace: true });
     if (user_id && user_id !== userId) navigate("/", { replace: true });
   }, [localStorage.getItem("user_id"), userId]);
   return (

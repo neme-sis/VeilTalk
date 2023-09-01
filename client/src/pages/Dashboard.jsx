@@ -8,7 +8,9 @@ const Dashboard = () => {
   const navigate = useNavigate();
   useEffect(() => {
     if (localStorage.getItem("user_id"))
-      navigate("/user/" + localStorage.getItem("user_id") + "/comments");
+      navigate("/user/" + localStorage.getItem("user_id") + "/comments", {
+        replace: true,
+      });
   }, [localStorage.getItem("user_id")]);
   return (
     <>

@@ -18,7 +18,7 @@ export function TopDialog() {
     console.log(createdUser);
     setIsUploading(false);
     if (createdUser) {
-      navigate(`/user/${createdUser.user_id}/comments`);
+      navigate(`/user/${createdUser.user_id}/comments`, { replace: true });
     }
   };
   let timeout = null;
