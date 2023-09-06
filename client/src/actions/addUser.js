@@ -8,7 +8,10 @@ export const addUser = async ({ name, email }) => {
     });
     if (response.data.code === 200) {
       const resp = response.data.model;
-      if (resp.user_id) localStorage.setItem("user_id", resp.user_id);
+      if (resp.user_id) {
+        localStorage.setItem("user_id", resp.user_id);
+        localStorage.setItem("token", resp.token);
+      }
       return resp;
     } else throw new Error(response.data.message);
   } catch (err) {

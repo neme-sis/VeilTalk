@@ -6,6 +6,7 @@ const {
 
 const { v4 } = require("uuid");
 const Comments = require("../../model/Comments");
+const randomstring = require("randomstring");
 
 const registerUser = async (req, res) => {
   const { name, email } = req.body;
@@ -15,6 +16,9 @@ const registerUser = async (req, res) => {
   const user_id = v4();
   let userData = { user_name: name, user_id };
   if (email) userData.email = email;
+
+  const token = randomstring.generate(12 + Math.floor(Math.random() * 10));
+  userData.token = token;
 
   try {
     const owner = await Owner.create(userData);

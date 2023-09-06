@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const EachComment = new mongoose.Schema({
-  comment_id: { type: String, required: true, unique: true },
+  comment_id: { type: String, required: true },
   comment: { type: String, required: true },
   name: { type: String },
   timestamp: { type: Number },
